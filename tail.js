@@ -6,12 +6,12 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const tail = function (actual) {
-  let result = actual.slice(1)
+const tail = function(actual) {
+  let result = actual.slice(1);
   return result;
 };
 const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words); 
+tail(words);
 assertEqual(words.length, 3);
 assertEqual(words.slice(2).length, 3);
-assertEqual(words.slice(3),3)
+assertEqual(words.slice(3),3);
