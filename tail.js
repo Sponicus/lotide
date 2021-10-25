@@ -6,11 +6,12 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-let head = function (actual) {
-  return actual[0]
+const tail = function (actual) {
+  let result = actual.slice(1)
+  return result;
 };
-
-assertEqual(head([5,6,7]), 5);
-assertEqual(head(["Lighthouse", "Labs", "Hello"]), "Lighthouse")
-assertEqual(head([]), 6);
-assertEqual(head([6]), 6);
+const words = ["Yo Yo", "Lighthouse", "Labs"];
+tail(words); 
+assertEqual(words.length, 3);
+assertEqual(words.slice(2).length, 3);
+assertEqual(words.slice(3),3)
