@@ -16,7 +16,6 @@ const eqArrays = function(array1,array2) {
 };
 
 const without = function (source,itemsToRemove) {
-  let newArray = [];
   for(let i = 0; i < itemsToRemove.length; i++) {
     source = source.filter(function (source) {
       if(source !== itemsToRemove[i]){
