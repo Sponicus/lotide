@@ -18,30 +18,25 @@ const eqArrays = function (array1, array2) {
   return true;
 };
 
-//console.log(eqArrays(["2", 3], ["2", 3, 4] ))
-
-// Returns true if both objects have identical keys with identical values.
-// Otherwise you get back a big fat false!
 const eqObjects = function (object1, object2) {
   if (Object.keys(object1).length !== Object.keys(object2).length) {
     return false
   }
   for (let i of Object.keys(object1)) {
-    //console.log("Object 1 --->", Object.values(object1[i]));
-    //console.log("Object 2 --->", Object.values(object2[i]));
-    // check if they are arrays ---   Array.isArray(object1[i])
     if (Array.isArray(object1[i])) {
       if (!eqArrays(object1[i], object2[i])) {
         return false
       };
     } else {
       if (object1[i] !== object2[i]) {
-        return false //not returning and don't know why!
+        return false 
       }
     }
   }
   return true;
 };
+
+////// TEST CODE /////
 
 const ab = { a: "1", b: "2" };
 const ba = { b: "2", a: "1" };
