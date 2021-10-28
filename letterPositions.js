@@ -17,12 +17,28 @@ const eqArrays = function(array1,array2) {
 
 const letterPositions = function(sentence) {
   const results = {};
-
-  //Step 1) Define Object Structure To Return
-
+  // loop through sentence. 
+  for(let i = 0; i < sentence.length; i++) {
+    /*console.log(i);
+    console.log(sentence[i]);*/
+    //add each letter to a key in results and add their position to the key as part of an array. Make sure no spaces are added to the object
+    if (sentence[i] === " ") {
+      //do nothing
+    } else if (results[sentence[i]] !== undefined) {
+      //add position to key
+      results[sentence[i]].push(i);
+      //console.log(i);
+    } else {
+      //add letter and positiom
+      results[sentence[i]] = [i]
+      //console.log(sentence[i]);
+    }   
+  }
+  //console.log(results)
+  //return said object with results 
   return results;
 };
 
 ///// Test /////
-
-assertArraysEquals(letterPositions("hello"), { h:[1], e: [1], l:[2], o:[1] });
+//letterPositions('hello dear')
+assertArraysEquals(letterPositions("hello").e, [1]);
