@@ -18,4 +18,4 @@ const eqArrays = function (array1, array2) {
   return true;
 };
 
-assertArraysEquals([1,4,3],[1,2,3]);
+assertArraysEquals([1,2,3],[1,2,3]);
